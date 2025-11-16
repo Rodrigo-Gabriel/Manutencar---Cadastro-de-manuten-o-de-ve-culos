@@ -1,0 +1,4 @@
+Azul escuro: #092b5a
+Azul claro: #09738a
+Pastel: #e9e4bb
+Branco: #fff

@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    height: 100vh;
+    background-color: #e4e4e4;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12vh 6vh;
+    border-radius: 30px;
+    background: linear-gradient(#299, #369, #269);
+}
+
+.section-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 20px;
+    width: 35vh;
+    height: 50vh;
+    gap: 2vh;
+
+    background-color: rgb(236, 236, 236);
+}
+
+.title {
+    font-size: 50px;
+    color: #002;
+}
+
+.form-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2vh;
+}
+
+input {
+    background-color: #e0e0e0;
+    padding: 15px;
+    width: 30vh;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+div.senha {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+div i {
+    position: absolute;
+    right: 5%;
+    font-size: 20px;
+}
+
+button.btn-signIn {
+    color: #fff;
+    background-color: #269;
+    padding: 15px;
+    width: 80%;
+    border: none;
+    border-radius: 4px;
+    font-size: 20px;
+
+    transition: 0.5s;
+}
+.btn-signIn:hover {
+    cursor: pointer;
+    background-color: #258;
+}
+
+a {
+    color: #000;
+    text-decoration: none;
+    font-size: 15px;
+    transition: 0.5s;
+}
+a:hover {
+    color: #258;
+    font-size: 15.3px;
+}

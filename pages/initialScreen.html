@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style/initialScreen.css">
+    <link rel="shortcut icon" href="../assets/img/ManutenCar-logo.png" type="image/x-icon"/>
+
+    <title>ManutenCar</title>
+</head>
+<body>
+    <header>
+        <section class="header">
+            <div>
+                <h1>ManutenCar</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="../pages/register.html">Registrar</a>
+                    </li>
+                    <li>
+                        <a href="../index.html">Sair</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+    <main>
+        <div class="principal">
+            <div class="card-1">
+                <section class="grid-1">
+                    <h1>Cadastrar Manutenção</h1>
+                    <form action="" class="registration-form">
+                        <label for="marca">Marca do Veiculo <b>*</b></label>
+                        <select name="marcas" id="marca" required>
+                            <option disabled selected value="null">Escolha</option>
+                            <option value="Fiat">Fiat</option>
+                            <option value="Honda">Honda</option>
+                            <option value="Toyota">Toyota</option>
+                        </select>
+
+                        <label for="placa">Placa <b>*</b></label>
+                        <input type="text" name="placa" id="placa" maxlength="10" placeholder="RIO02A18 OU ABC-1234" required>
+
+                        <label for="descricao">Descrição <b>*</b></label>
+                        <textarea name="descricao" id="descricao" rows="4" cols="20" required></textarea>
+
+                        <label for="data">Data da Manutenção <b>*</b></label>
+                        <input type="date" name="data" id="data" style="color: rgb(170, 170, 170);" required>
+
+                        <button class="Cadastrar" id="btnCadastrar" type="button">Cadastrar</button>
+                    </form>                 
+                </section>
+            </div>  
+            <div class="card-2">
+                <section class="grid-2">
+                    <h1>Listagem de manutenções</h1>
+                        <div class="table">
+                            <table border="" id="tabelaManutencoes">
+                                <tr>
+                                    <th>Marca do Veiculo</th>
+                                    <th>Placa</th>
+                                    <th>Descrição</th>
+                                    <th>Data da Manutenção</th>
+                                    <th style="font-size: 12px;">
+                                        Edit/Del
+                                    </th>
+                                </tr>
+                            </table>
+                            <div class="btn-section">
+                                <button class="btn-pen">
+                                    <img class="pen" src="../assets/img/pen.png" alt="Edit">
+                                </button>
+                                <button class="btn-trash">
+                                    <img class="trash" src="../assets/img/trash.png" alt="TrashCan">
+                                </button>
+                            </div>
+                        </div>
+                </section>
+            </div>
+        </div>
+    </main>
+    <footer></footer>
+
+    <script src="../script/initialScreen.js" defer></script>
+</body>
+</html>

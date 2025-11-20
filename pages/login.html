@@ -14,7 +14,7 @@
     <header></header>
     <main>
         <section class="section-form">
-            <h1 class="title">Register</h1>
+            <h1 class="title">Login</h1>
             <form class="form-login" action="">
                 <input type="text" id="nome" placeholder="Nome" maxlength="100" required />
 
@@ -31,15 +31,16 @@
                     <i class="bi bi-eye-fill" id="btn-confirm-senha" onclick="mostrarConfirmSenha()"></i>
                 </div>
 
+                <a href="../pages/forgotPass.html">Esqueceu a senha?</a>
                 <button class="btn-signIn" id="btn-signin" onclick="enviar(event)">
-                    Create
+                    Sign in
                 </button>
-                <a href="./login.html">Já tem uma conta? <b>Entre nela!</b></a>
+                <a href="./register.html">Ainda não tem uma conta? <b>Crie uma</b></a>
             </form>
         </section>
     </main>
-    <footer></footer>
+    <footer><a href="./pages/initialScreen.html">.</a></footer>
 
-    <script src="../script/register.js" defer></script>
+    <script src="../script/login.js" defer></script>
 </body>
 </html>

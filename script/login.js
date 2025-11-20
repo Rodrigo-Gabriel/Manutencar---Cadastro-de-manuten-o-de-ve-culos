@@ -1,5 +1,3 @@
-
-
 // Função para mostrar a senha pelo olho.
 function mostrarSenha() {
     let inputPass = document.getElementById('senha');
@@ -33,11 +31,11 @@ function ConfirmPass() {
     const senha1 = document.getElementById('senha').value;
     const senha2 = document.getElementById('confirmPass').value;
 
-    if(senha1 === senha2){
-        return true;
-    }else{
-        alert("As senhas não coincidem!");
+    if(senha1 !== senha2 || senha1 === "" || senha2 === ""){
+        alert("As senhas não coincidem ou estão vazias!");
         return false;
+    }else{
+        return true;
     }
 }
 
@@ -49,9 +47,9 @@ function enviar(event) {
     const email = document.getElementById('email').value;
 
     // Validar nome
-    if (nome.trim === "") {
+    if (nome === "") {
         alert("Digite o seu nome!");
-        return;
+        return false;
     }
 
     // validar email
@@ -74,5 +72,5 @@ function enviar(event) {
   console.log('Botão:', localStorage.getItem('btnSignIn'));
   console.log('Nome salvo:', localStorage.getItem('nome')); 
 
-  window.location.href = "./pages/initialScreen.html";  
+  window.location.href = "../pages/initialScreen.html";  
 }

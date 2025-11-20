@@ -1,0 +1,41 @@
+main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+}
+
+.txt-welc {
+   width: 100%;
+   margin-bottom: 5%;
+   font-size: 25px;
+}
+
+.texto {
+    line-height: 30px;
+    width: 40%;
+}
+
+.texto .p1 {
+    margin-bottom: 5%;
+}
+
+.pontos {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+.pontos ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* footer */
+footer {
+    margin: 1% auto;
+}
+
+.copyright {
+    color: black;
+}

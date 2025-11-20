@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     btnCadastrar.addEventListener("click", () => {
 
         const marca = document.getElementById('marca').value.trim();
+        const modelo = document.getElementById('modelo').value.trim();
         const placa = document.getElementById('placa').value.trim();
         const descricao = document.getElementById('descricao').value.trim();
         const data = document.getElementById('data').value.trim();
@@ -22,6 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         novaLinha.innerHTML = `
             <td>${marca}</td>
+            <td>${modelo}</td>
             <td>${placa}</td>
             <td>${descricao}</td>
             <td>${formatarData(data)}</td>

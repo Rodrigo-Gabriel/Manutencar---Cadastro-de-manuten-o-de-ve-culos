@@ -74,5 +74,5 @@ function enviar(event) {
   console.log('Botão:', localStorage.getItem('btnSignIn'));
   console.log('Nome salvo:', localStorage.getItem('nome')); 
 
-  window.location.href = "../pages/initialScreen.html";  
+  window.location.href = "./pages/initialScreen.html";  
 }

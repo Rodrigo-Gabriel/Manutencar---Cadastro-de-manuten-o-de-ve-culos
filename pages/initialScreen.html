@@ -17,6 +17,9 @@
             <nav>
                 <ul>
                     <li>
+                        <a href="../pages/dashboard.html">Dashboard</a>
+                    </li>
+                    <li>
                         <a href="../pages/register.html">Registrar</a>
                     </li>
                     <li>
@@ -33,6 +36,7 @@
                     <h1>Cadastrar Manutenção</h1>
                     <form action="" class="registration-form">
                         <label for="marca">Marca do Veiculo <b>*</b></label>
+                        <!-- <input type="text" name="marcas" id="marca" maxlength="10" placeholder="EX: Toyota, Ford, Fiat..." required> -->
                         <select name="marcas" id="marca" required>
                             <option disabled selected value="null">Escolha</option>
                             <option value="Fiat">Fiat</option>
@@ -40,17 +44,23 @@
                             <option value="Toyota">Toyota</option>
                         </select>
 
+                        <label for="marca">Modelo do Veiculo <b>*</b></label>
+                        <input type="text" name="modelos" id="modelo" maxlength="10" placeholder="EX: Corolla, Fiesta, Fiat..." required>
+
                         <label for="placa">Placa <b>*</b></label>
                         <input type="text" name="placa" id="placa" maxlength="10" placeholder="RIO02A18 OU ABC-1234" required>
 
                         <label for="descricao">Descrição <b>*</b></label>
-                        <textarea name="descricao" id="descricao" rows="4" cols="20" required></textarea>
+                        <textarea name="descricao" id="descricao" rows="4" cols="20" maxlength="100" required></textarea>
 
                         <label for="data">Data da Manutenção <b>*</b></label>
                         <input type="date" name="data" id="data" style="color: rgb(170, 170, 170);" required>
 
+                        <label for="data">Custo <b>*</b></label>
+                        <input type="number" name="custo" id="custo" placeholder="R$" required>
+
                         <button class="Cadastrar" id="btnCadastrar" type="button">Cadastrar</button>
-                    </form>                 
+                    </form>             
                 </section>
             </div>  
             <div class="card-2">
@@ -63,19 +73,12 @@
                                     <th>Placa</th>
                                     <th>Descrição</th>
                                     <th>Data da Manutenção</th>
+                                    <th>Custo</th>
                                     <th style="font-size: 12px;">
                                         Edit/Del
                                     </th>
                                 </tr>
                             </table>
-                            <div class="btn-section">
-                                <button class="btn-pen">
-                                    <img class="pen" src="../assets/img/pen.png" alt="Edit">
-                                </button>
-                                <button class="btn-trash">
-                                    <img class="trash" src="../assets/img/trash.png" alt="TrashCan">
-                                </button>
-                            </div>
                         </div>
                 </section>
             </div>
@@ -84,5 +87,6 @@
     <footer></footer>
 
     <script src="../script/initialScreen.js" defer></script>
+    <script src="../script/validacoes.js" defer></script>
 </body>
 </html>

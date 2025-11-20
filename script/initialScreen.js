@@ -9,9 +9,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const placa = document.getElementById('placa').value.trim();
         const descricao = document.getElementById('descricao').value.trim();
         const data = document.getElementById('data').value.trim();
+        const custo = document.getElementById('custo').value.trim();
 
         // Validações simples
-        if (!marca || placa === "" || descricao === "" || data === "") {
+        if (!marca || placa === "" || descricao === "" || data === "" || custo === "") {
             alert("Os campos precisam estar preenchidos!");
             return;
         }
@@ -24,7 +25,17 @@ document.addEventListener("DOMContentLoaded", () => {
             <td>${placa}</td>
             <td>${descricao}</td>
             <td>${formatarData(data)}</td>
-             <td><input type="checkbox"></td>
+            <td>${"R$" + (custo)}</td>
+            <td>
+                <div class="btn-section">
+                <button class="btn-pen">
+                    <img class="pen" id="btnPen" src="../assets/img/pen.png" alt="Edit">
+                </button>
+                <button class="btn-trash" id="btnTrash" type="button">
+                    <img class="trash" src="../assets/img/trash.png" alt="TrashCan">
+                </button>
+            </div>
+            </td>
         `;
 
         tabela.appendChild(novaLinha);
@@ -35,15 +46,24 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // Formata data de "2025-11-05" → "05/11/2025" padrão brasileiro!
-    function formatarData(dataISO) {
-        const partes = dataISO.split("-");
-        return `${partes[2]}/${partes[1]}/${partes[0]}`;
-    }
+function formatarData(dataISO) {
+    const partes = dataISO.split("-");
+    return `${partes[2]}/${partes[1]}/${partes[0]}`;
+}
 
-    // Limpa os campos
-    function limparFormulario() {
-        document.getElementById("marca").value = "";
-        document.getElementById("placa").value = "";
-        document.getElementById("descricao").value = "";
-        document.getElementById("data").value = "";
-    }
+// Limpa os campos
+function limparFormulario() {
+    document.getElementById("marca").value = "";
+    document.getElementById("placa").value = "";
+    document.getElementById("descricao").value = "";
+    document.getElementById("data").value = "";
+}
+
+
+function apagarItem() {
+    const btnApagar = document.getElementById("btnTrash");
+
+    btnApagar.addEventListener("click", () => {
+            alert("Deu certo!");
+    });
+}

@@ -1,24 +1,11 @@
-// Confirmar se uma senha está identica para fazer a validação.
-function ConfirmPass() {
-    const senha1 = document.getElementById('senha').value;
-    const senha2 = document.getElementById('confirmPass').value;
+// Verificar data de manutenção para não ser antes ou muito depois da data que a pessoa escolheu
+window.addEventListener("DOMContentLoaded", () => {
+    const inputData = document.getElementById("data");
 
-    if(senha1 === senha2){
-        return true;
-    }else{
-        alert("As senhas não coincidem");
-        return false;
-    }
-}
+    const hoje = new Date();
+    const ano = hoje.getFullYear();
+    const mes = String(hoje.getMonth() + 1).padStart(2, "0");
+    const dia = String(hoje.getDate()).padStart(2, "0");
 
-export function validarEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-}
-
-export function senhasIguais(s1, s2) {
-    return s1 === s2;
-}
-
-export function tamanhoSenha(senha, tamanho = 10) {
-    return senha.length === tamanho;
-}
+    inputData.value = `${ano}-${mes}-${dia}`;
+});

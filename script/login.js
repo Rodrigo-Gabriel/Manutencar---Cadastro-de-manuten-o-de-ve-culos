@@ -1,6 +1,6 @@
 // Função para mostrar a senha pelo olho.
 function mostrarSenha() {
-    let inputPass = document.getElementById('senha');
+     inputPass = document.getElementById('senha');
     let btnShowPass = document.getElementById('btn-senha');
 
     if(inputPass.type === 'password'){
@@ -11,7 +11,7 @@ function mostrarSenha() {
         btnShowPass.classList.replace('bi-eye-slash-fill', 'bi-eye-fill')
     }
 }
-
+let
 // Função para mostrar a senha pelo olho.
 function mostrarConfirmSenha() {
     let inputPass = document.getElementById('confirmPass');
